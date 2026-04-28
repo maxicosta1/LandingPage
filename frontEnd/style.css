@@ -234,6 +234,18 @@ body {
   transition: 0.3s;
 }
 
+#responsive {
+  margin-left: 150px;
+}
+
+#responsive h2{
+  font-size: 55px;
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+
 
 /* ===== BASE (mobile first) ===== */
 
@@ -279,9 +291,12 @@ header nav {
 .reunion {
   padding: 12px 22px;
   font-size: 14px;
-  margin: 30px auto;
+  margin: 0px auto;
   display: inline-block;
 }
+
+
+
 
 /* ===== TABLET ===== */
 @media (min-width: 768px) {
