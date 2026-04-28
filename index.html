@@ -12,8 +12,13 @@
 
   <header>
     <nav>
+
       <div class="logo">sCode</div>
 
+      <!-- BOTÓN HAMBURGUESA -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- MENÚ -->
       <div class="nav-center">
         <a href="#home"><b>Nosotros</b></a>
         <a href="#services"><b>Servicios</b></a>
@@ -22,10 +27,14 @@
       </div>
 
       <div class="nav-right">
-        <a href="#contact" class="cta-btn"> <b>Contactanos</b></a>
+        <a href="#contact" class="cta-btn"><b>Contactanos</b></a>
       </div>
+
     </nav>
   </header>
+
+  <!-- OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <section id="home">
 
@@ -44,7 +53,7 @@
       <a href="#soluciones" class="reunion"><b>Solicita una reunion</b></a>
     </div>
 
-    <!-- JS -->
+    <!-- SCRIPT TYPING (lo dejé como lo tenías) -->
     <script>
       const text = "Modernizamos\ntu negocio.";
       const speed = 90;
@@ -57,7 +66,6 @@
 
           const container = document.getElementById("typing-text");
 
-          //  manejar espacios y saltos de línea
           if (text.charAt(i) === " ") {
             container.innerHTML += "&nbsp;";
           }
@@ -94,7 +102,6 @@
         }
       });
 
-      // fallback
       setTimeout(() => {
         if (!started) startTyping();
       }, 2000);
@@ -105,12 +112,18 @@
   <section id="responsive">
     <h2>Funciona <br> en todos lados</h2>
 
-    <p class="parrafo">En sCode desarrollamos sitios web que se adaptan a <br> cualquier dispositivo. Tu negocio no tiene
-      límites: puede estar <br> en el bolsillo de tus clientes, en sus computadoras o donde <br> sea que te necesiten. Diseñamos
-      experiencias rápidas, claras <br> y totalmente responsive para que tu marca se vea y funcione <br>   perfectamente, siempre.
+    <p class="parrafo">
+      En sCode desarrollamos sitios web que se adaptan a <br>
+      cualquier dispositivo. Tu negocio no tiene límites: puede estar <br>
+      en el bolsillo de tus clientes, en sus computadoras o donde <br>
+      sea que te necesiten. Diseñamos experiencias rápidas, claras <br>
+      y totalmente responsive para que tu marca se vea y funcione <br>
+      perfectamente, siempre.
     </p>
   </section>
 
-</body>
+  <!-- SCRIPT MENÚ -->
+  <script src="backEnd/script.js"></script>
 
+</body>
 </html>

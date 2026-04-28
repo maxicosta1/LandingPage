@@ -23,7 +23,7 @@ body {
   padding-top: 80px;
 }
 
-/* ===== HEADER (mobile first) ===== */
+/* ===== HEADER ===== */
 header {
   width: 100%;
   padding: 15px 20px;
@@ -54,41 +54,65 @@ header nav {
   justify-content: space-between;
 }
 
-/* NAV */
+/* LOGO */
 .logo {
   font-size: 18px;
   font-weight: bold;
 }
 
-.nav-center {
-  display: none; /* oculto en mobile */
+/* ===== HAMBURGUESA ===== */
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-.nav-right {
+/* NAV MOBILE */
+.nav-center {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+
+  background: white;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  transition: 0.3s ease;
+}
+
+.nav-center.active {
+  right: 0;
 }
 
 /* LINKS */
 .nav-center a {
   text-decoration: none;
   color: #333;
-  position: relative;
+  font-size: 18px;
 }
 
-.nav-center a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
+/* OVERLAY */
+.nav-overlay {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 0%;
-  height: 2px;
-  background: #7b2cff;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
   transition: 0.3s;
 }
 
-.nav-center a:hover::after {
-  width: 100%;
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* CTA */
@@ -186,19 +210,28 @@ header nav {
 
 #responsive h2 {
   font-size: 28px;
-  text-align: center;
+  text-align: center; /* centrado en mobile */
 }
 
 /* ===== TABLET ===== */
 @media (min-width: 768px) {
 
-  header {
-    padding: 18px 30px;
+  .menu-toggle {
+    display: none;
   }
 
   .nav-center {
-    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    background: transparent;
+    justify-content: center;
     gap: 20px;
+  }
+
+  .nav-overlay {
+    display: none;
   }
 
   .logo {
@@ -220,7 +253,7 @@ header nav {
 
   #responsive h2 {
     font-size: 40px;
-    text-align: left;
+    text-align: left; /* desktop */
   }
 }
 
