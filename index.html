@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sCode Digital Solutions</title>
+    <link rel="stylesheet" href="frontEnd/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">sCode</div>
+
+        <div class="nav-center">
+            <a href="#home"><b>Nosotros</b></a>
+            <a href="#services"><b>Servicios</b></a>
+            <a href="#clientes"><b>Clientes</b></a>
+            <a href="#soluciones"><b>Soluciones</b></a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#contact" class="cta-btn"> <b>Contactanos</b></a>
+        </div>
+    </nav>
+</header>
+
+<section id="home">
+
+<!-- HERO -->
+<div class="hero">
+    <img src="frontEnd/images/hero.png" class="hero-img" alt="hero">
+
+    <h1 class="hero-title">
+        <span id="typing-text"></span>
+    </h1>
+</div>
+
+<div class="content">
+    <p><b>Creamos sitios web modernos, rápidos y adaptados a cualquier dispositivo.</b></p>
+
+    <a href="#soluciones" class="reunion"><b>Solicita una reunion</b></a>
+</div>
+
+<!-- JS -->
+<script>
+const text = "Modernizamos\ntu negocio.";
+const speed = 90;
+
+let i = 0;
+let started = false;
+
+function typeWriter() {
+  if (i < text.length) {
+
+    const container = document.getElementById("typing-text");
+
+    //  manejar espacios y saltos de línea
+    if (text.charAt(i) === " ") {
+      container.innerHTML += "&nbsp;";
+    } 
+    else if (text.charAt(i) === "\n") {
+      container.innerHTML += "<br>";
+    } 
+    else {
+      const span = document.createElement("span");
+      span.textContent = text.charAt(i);
+      span.classList.add("letter");
+      container.appendChild(span);
+    }
+
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+function startTyping() {
+  if (started) return;
+  started = true;
+
+  document.getElementById("typing-text").innerHTML = "";
+  i = 0;
+
+  typeWriter();
+}
+
+const heroImg = document.querySelector(".hero-img");
+
+heroImg.addEventListener("animationend", (e) => {
+  if (e.animationName === "appleReveal") {
+    startTyping();
+  }
+});
+
+// fallback
+setTimeout(() => {
+  if (!started) startTyping();
+}, 2000);
+</script>
+
+</section>
+
+<section id="responsive">
+    <h2>Funciona <br> en todos lados.</h2>
+</section>
+
+</body>
+</html>
