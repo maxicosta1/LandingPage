@@ -15,10 +15,8 @@
 
       <div class="logo">sCode</div>
 
-      <!-- BOTÓN HAMBURGUESA -->
       <div class="menu-toggle" id="menu-toggle">☰</div>
 
-      <!-- MENÚ -->
       <div class="nav-center">
         <a href="#home"><b>Nosotros</b></a>
         <a href="#services"><b>Servicios</b></a>
@@ -33,97 +31,175 @@
     </nav>
   </header>
 
-  <!-- OVERLAY -->
   <div class="nav-overlay" id="nav-overlay"></div>
 
+  <!-- HERO -->
   <section id="home">
 
-    <!-- HERO -->
     <div class="hero">
+
       <img src="frontEnd/images/hero.png" class="hero-img" alt="hero">
 
       <h1 class="hero-title">
         <span id="typing-text"></span>
       </h1>
+
     </div>
 
     <div class="content">
-      <p><b>Creamos sitios web modernos, rápidos y adaptados a cualquier dispositivo.</b></p>
 
-      <a href="#soluciones" class="reunion"><b>Solicita una reunion</b></a>
+      <p>
+        <b>
+          Creamos sitios web modernos, rápidos y adaptados a cualquier dispositivo.
+        </b>
+      </p>
+
+      <a href="#soluciones" class="reunion">
+        <b>Solicita una reunion</b>
+      </a>
+
     </div>
 
-    <!-- SCRIPT TYPING (lo dejé como lo tenías) -->
-    <script>
-      const text = "Modernizamos\ntu negocio.";
-      const speed = 90;
+  </section>
 
-      let i = 0;
-      let started = false;
+  <!-- FUNCIONA -->
+  <section id="funciona">
 
-      function typeWriter() {
-        if (i < text.length) {
+    <div class="cont">
 
-          const container = document.getElementById("typing-text");
+      <div class="texto">
 
-          if (text.charAt(i) === " ") {
-            container.innerHTML += "&nbsp;";
-          }
-          else if (text.charAt(i) === "\n") {
-            container.innerHTML += "<br>";
-          }
-          else {
-            const span = document.createElement("span");
-            span.textContent = text.charAt(i);
-            span.classList.add("letter");
-            container.appendChild(span);
-          }
+        <h2>
+          Funciona <br>
+          en todos lados
+        </h2>
 
-          i++;
-          setTimeout(typeWriter, speed);
-        }
-      }
+        <br>
 
-      function startTyping() {
-        if (started) return;
-        started = true;
+        <p class="parrafo">
+          En sCode desarrollamos sitios web que se adaptan a
+          cualquier dispositivo. Tu negocio no tiene límites:
+          puede estar en el bolsillo de tus clientes,
+          en sus computadoras o donde sea que te necesiten.
+          Diseñamos experiencias rápidas, claras y totalmente
+          responsive para que tu marca se vea y funcione
+          perfectamente, siempre.
+        </p>
 
-        document.getElementById("typing-text").innerHTML = "";
-        i = 0;
+        <p class="negrita">
+          <b>Hacé crecer tu negocio con sCode.</b>
+        </p>
 
-        typeWriter();
-      }
+      </div>
 
-      const heroImg = document.querySelector(".hero-img");
+      <div class="img-container">
+        <img src="frontEnd/images/phone.png" alt="Teléfono" class="phone">
+      </div>
 
-      heroImg.addEventListener("animationend", (e) => {
-        if (e.animationName === "appleReveal") {
-          startTyping();
-        }
-      });
-
-      setTimeout(() => {
-        if (!started) startTyping();
-      }, 2000);
-    </script>
+    </div>
 
   </section>
 
-  <section id="responsive">
-    <h2>Funciona <br> en todos lados</h2>
+  <!-- SCRIPT TYPING -->
+  <script>
 
-    <p class="parrafo">
-      En sCode desarrollamos sitios web que se adaptan a <br>
-      cualquier dispositivo. Tu negocio no tiene límites: puede estar <br>
-      en el bolsillo de tus clientes, en sus computadoras o donde <br>
-      sea que te necesiten. Diseñamos experiencias rápidas, claras <br>
-      y totalmente responsive para que tu marca se vea y funcione <br>
-      perfectamente, siempre.
-    </p>
-  </section>
+    const text = "Modernizamos\ntu negocio.";
+    const speed = 90;
 
-  <!-- SCRIPT MENÚ -->
+    let i = 0;
+    let started = false;
+
+    function typeWriter() {
+
+      if (i < text.length) {
+
+        const container = document.getElementById("typing-text");
+
+        if (text.charAt(i) === " ") {
+          container.innerHTML += "&nbsp;";
+        }
+
+        else if (text.charAt(i) === "\n") {
+          container.innerHTML += "<br>";
+        }
+
+        else {
+
+          const span = document.createElement("span");
+
+          span.textContent = text.charAt(i);
+
+          span.classList.add("letter");
+
+          container.appendChild(span);
+        }
+
+        i++;
+
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    function startTyping() {
+
+      if (started) return;
+
+      started = true;
+
+      document.querySelector(".hero-title").classList.add("typing");
+
+      document.getElementById("typing-text").innerHTML = "";
+
+      i = 0;
+
+      typeWriter();
+    }
+
+    const heroImg = document.querySelector(".hero-img");
+
+    heroImg.addEventListener("animationend", (e) => {
+
+      if (e.animationName === "appleReveal") {
+        startTyping();
+      }
+
+    });
+
+    setTimeout(() => {
+
+      if (!started) {
+        startTyping();
+      }
+
+    }, 2000);
+
+  </script>
+
+  <!-- SCRIPT SCROLL ANIMATION -->
+  <script>
+
+    const texto = document.querySelector(".texto");
+
+    function mostrarAnimacion() {
+
+      const triggerBottom = window.innerHeight * 0.8;
+
+      const boxTop = texto.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        texto.classList.add("show");
+      }
+
+    }
+
+    window.addEventListener("scroll", mostrarAnimacion);
+
+    mostrarAnimacion();
+
+  </script>
+
   <script src="backEnd/script.js"></script>
 
 </body>
+
 </html>
