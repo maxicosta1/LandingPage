@@ -22,14 +22,14 @@
 /* ===== BODY ===== */
 
 body {
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 /* ===== HEADER ===== */
 
 header {
   width: 100%;
-  padding: 20px 40px;
+  padding: 9px 40px;
 
   position: fixed;
   top: 0;
@@ -205,7 +205,8 @@ header nav {
 .content {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 110px;
+  margin-bottom: 30px;
+  
 }
 
 .content p {
@@ -215,6 +216,7 @@ header nav {
   max-width: 600px;
 
   margin: 0 auto 25px;
+  margin-bottom: 35px;
 }
 
 .reunion {
@@ -232,11 +234,13 @@ header nav {
 /* ===== FUNCIONA ===== */
 
 #funciona {
-  margin-left: 60px;
+  margin-left: 00px;
+  background-color: #f6f6f6;
 }
 
 #funciona .cont {
-  margin: 80px 0;
+  margin: 45px;
+  padding: 20px;
 
   display: flex;
   justify-content: space-between;
@@ -265,7 +269,7 @@ header nav {
   max-width: 300px;
   width: 100%;
 
-  margin-right: 180px;
+  margin-right: 160px;
 }
 
 /* ===== ANIMACIONES SCROLL ===== */
@@ -341,4 +345,59 @@ header nav {
   background-color: transparent;
   border-radius: 56px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#home{
+  background-color: #f6f6f6;
+  padding: 25px;
+}
+
+#servicios {
+  background-color: #f6f6f6;
+  padding: 25px;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textos h3{
+  color: #7b2cff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contenedor {
+  display: flex;
+  gap: 20px;
+}
+
+.tarjetas{
+  width: 200px;
+  height:200px;
+  border-radius: 16px;
+  background-color: red;
+  margin: 0px;
+  padding: 30px;
+}
+
+.tarjetas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+
+.formulario{
+  width: 200px;
+  height:200px;
+  border-radius: 16px;
+  color: #fefff6;
 }
