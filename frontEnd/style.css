@@ -369,31 +369,48 @@ header nav {
   margin-bottom: 10px;
 }
 
+.textos h2{
+  color: black;
+  font-size: 32px;
+}
+
+.textos p{
+  color: black;
+  font-size: 20px;;
+  text-align: center;
+  margin-top: 20px;
+}
 .contenedor {
   display: flex;
   gap: 20px;
 }
 
 .tarjetas{
-  width: 200px;
-  height:200px;
+
   border-radius: 16px;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   margin: 0px;
-  padding: 30px;
+  padding: 40px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.tarjetas h4{
+  color: #000000;
+  font-size: 22px;
+
 }
 
 .tarjetas:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .contenedor {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  margin-top: 30px;
 }
-
 
 .formulario{
   width: 200px;
