@@ -98,7 +98,7 @@ header nav {
 
   background: #7b2cff;
 
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .nav-center a:hover::after {
@@ -119,8 +119,8 @@ header nav {
 }
 
 .cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(123,44,255,0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(123,44,255,0.17);
 }
 
 /* ===== HERO ===== */
@@ -220,7 +220,7 @@ header nav {
 }
 
 .reunion {
-  background: black;
+  background: #7b2cff;
   color: white;
 
   padding: 13px 30px;
@@ -229,6 +229,12 @@ header nav {
   text-decoration: none;
 
   transition: 0.3s;
+}
+
+.reunion:hover {
+  transform: translateY(-5px);
+  transition: 0.85s;
+  box-shadow: 0 10px 20px rgba(123,44,255,0.17);
 }
 
 /* ===== FUNCIONA ===== */
@@ -396,13 +402,15 @@ header nav {
 
 .tarjetas h4{
   color: #000000;
-  font-size: 22px;
+  margin-bottom: 7px;
+  font-size: 24px;
 
 }
 
 .tarjetas:hover {
   transform: translateY(-5px);
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: 0.85s;
+  box-shadow: 2px 2px 42px 1px rgba(123,44,255,0.67);
 }
 
 .contenedor {
