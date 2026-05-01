@@ -617,8 +617,8 @@ header nav {
 }
 
 .arrow svg {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 
   stroke: #7c3aed;
   stroke-width: 2.5;
@@ -644,21 +644,7 @@ header nav {
 
 /* ANIMACION */
 
-@keyframes floatArrow {
 
-  0% {
-    transform: translateX(0px);
-  }
-
-  50% {
-    transform: translateX(8px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-
-}
 
 /* ===== BANNER ===== */
 
