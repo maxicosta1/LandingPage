@@ -126,8 +126,10 @@ header nav {
   transition: 0.3s;
 }
 
-.cta-btn:hover {
-  transform: translateY(-1px);
+
+.reunion:hover {
+  transform: translateY(-5px);
+  transition: 0.85s;
   box-shadow: 0 10px 20px rgba(123,44,255,0.17);
 }
 
@@ -433,4 +435,162 @@ header nav {
   height:200px;
   border-radius: 16px;
   color: #fefff6;
+}
+
+#proceso {
+  background-color: #f6f6f6;
+  margin-top: 45px;
+  padding: 25px;
+
+}
+
+.tarjetaProceso {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 290px;
+  min-height: 370px;
+  gap: 20px;
+  padding: 40px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.tarjetaProceso p {
+  text-align: center;
+  line-height: 1.7;
+  color: #666;
+  max-width: 240px;
+  margin: auto;
+}
+.tarjetaProceso h4{
+  font-size: 24px;
+}
+.tarjetaProceso h3{
+  padding:13px 30px;
+  background-color: #7b2cff;
+  color: white;
+  border-radius: 16px;
+  font-size: 20px;
+}
+
+.contenedorProceso {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.icon-circle {
+  width: 110px;
+  height: 110px;
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 30px auto;
+}
+
+.icon-circle svg {
+  width: 52px;
+  height: 52px;
+  stroke: #7c3aed;
+  stroke-width: 2;
+}
+
+.tarjetaProceso:hover {
+  transform: translateY(-10px);
+  transition: 1s;
+}
+
+.tarjetaProceso:hover .icon-circle {
+  transform: scale(1.05);
+}
+
+.process-banner {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 80px auto 0 auto;
+  padding: 35px 50px;
+
+  border-radius: 32px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.06),
+    rgba(168, 85, 247, 0.08)
+  );
+
+  border: 1px solid rgba(124, 58, 237, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.banner-icon {
+  min-width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.banner-icon svg {
+  width: 42px;
+  height: 42px;
+
+  stroke: #7c3aed;
+}
+
+.banner-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.banner-btn {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+
+  color: white;
+  text-decoration: none;
+
+  padding: 22px 38px;
+
+  border-radius: 18px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25);
+}
+
+.banner-btn:hover {
+  transform: translateY(-4px);
 }
