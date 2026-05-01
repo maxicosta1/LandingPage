@@ -725,31 +725,3 @@ header nav {
 .banner-btn:hover {
   transform: translateY(-4px);
 }
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 1400px) {
-
-  .process-wrapper {
-    width: 100%;
-  }
-
-  .contenedorProceso {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  .process-banner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .banner-left {
-    flex-direction: column;
-  }
-
-}
