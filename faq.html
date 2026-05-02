@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="frontEnd/style.css">
-    <title>Document</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQ | sCode</title>
+
+  <link rel="stylesheet" href="frontEnd/style.css">
+
 </head>
+
 <body>
 
-    <header>
+  <!-- HEADER -->
+
+  <header>
+
     <nav>
 
       <div class="logo">
@@ -16,129 +25,158 @@
       </div>
 
       <div class="nav-center">
-        <a href="#home"><b>Nosotros</b></a>
-        <a href="#services"><b>Servicios</b></a>
-        <a href="#clientes"><b>Clientes</b></a>
-        <a href="#soluciones"><b>FAQ</b></a>
+        <a href="index.html#nosotros"><b>Nosotros</b></a>
+        <a href="index.html#servicios"><b>Servicios</b></a>
+        <a href="index.html#proceso"><b>Proceso</b></a>
+        <a href="#faq"><b>FAQ</b></a>
       </div>
 
       <div class="nav-right">
-        <a href="frontEnd/contacto.html" class="cta-btn"><b>Contactanos</b></a>
+        <a href="frontEnd/contacto.html" class="cta-btn">
+          <b>Contactanos</b>
+        </a>
       </div>
 
     </nav>
+
   </header>
 
-    <section id="faq">
+  <!-- FAQ -->
 
-  <div class="faq-header">
+  <section id="faq">
 
-    <span>FAQ</span>
+    <div class="faq-header">
 
-    <h2>Preguntas frecuentes</h2>
+      <span>FAQ</span>
 
-    <p>
-      Respondemos las dudas más comunes sobre nuestros
-      servicios, procesos y tiempos de desarrollo.
-    </p>
+      <h2>Preguntas frecuentes</h2>
 
-  </div>
+      <p>
+        Respondemos las dudas más comunes sobre nuestros
+        servicios, procesos y tiempos de desarrollo.
+      </p>
 
-  <div class="faq-container">
+    </div>
 
-    <!-- ITEM -->
+    <div class="faq-container">
 
-    <div class="faq-item">
+      <!-- ITEM -->
 
-      <button class="faq-question">
-        ¿Cuánto tarda un proyecto web?
-        <span>+</span>
-      </button>
+      <div class="faq-item">
 
-      <div class="faq-answer">
-        <p>
-          El tiempo depende de la complejidad del proyecto.
-          Una landing page puede tardar entre 5 y 10 días,
-          mientras que un sistema personalizado puede requerir varias semanas.
-        </p>
+        <button class="faq-question">
+          ¿Cuánto tarda un proyecto web?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            El tiempo depende de la complejidad del proyecto.
+            Una landing page puede tardar entre 5 y 10 días,
+            mientras que un sistema personalizado puede requerir varias semanas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          ¿Las páginas son responsive?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Sí. Todos nuestros desarrollos están optimizados
+            para computadoras, tablets y dispositivos móviles.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          ¿Ofrecen mantenimiento?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Ofrecemos soporte y mantenimiento continuo para
+            asegurar el correcto funcionamiento y actualización del sitio.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          ¿Qué tecnologías utilizan?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Trabajamos con tecnologías modernas como HTML,
+            CSS, JavaScript, React, Node.js, Laravel y MySQL.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          ¿Pueden rediseñar una web existente?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Sí. Podemos modernizar el diseño, optimizar el rendimiento
+            y mejorar la experiencia de usuario de tu sitio actual.
+          </p>
+        </div>
+
       </div>
 
     </div>
 
-    <!-- ITEM -->
+  </section>
 
-    <div class="faq-item">
+  <!-- SCRIPT FAQ -->
 
-      <button class="faq-question">
-        ¿Las páginas son responsive?
-        <span>+</span>
-      </button>
+  <script>
 
-      <div class="faq-answer">
-        <p>
-          Sí. Todos nuestros desarrollos están optimizados
-          para computadoras, tablets y dispositivos móviles.
-        </p>
-      </div>
+    const faqQuestions = document.querySelectorAll(".faq-question");
 
-    </div>
+    faqQuestions.forEach(question => {
 
-    <!-- ITEM -->
+      question.addEventListener("click", () => {
 
-    <div class="faq-item">
+        const faqItem = question.parentElement;
 
-      <button class="faq-question">
-        ¿Ofrecen mantenimiento?
-        <span>+</span>
-      </button>
+        faqItem.classList.toggle("active");
 
-      <div class="faq-answer">
-        <p>
-          Ofrecemos soporte y mantenimiento continuo para
-          asegurar el correcto funcionamiento y actualización del sitio.
-        </p>
-      </div>
+      });
 
-    </div>
+    });
 
-    <!-- ITEM -->
+  </script>
 
-    <div class="faq-item">
+  <script src="backEnd/script.js"></script>
 
-      <button class="faq-question">
-        ¿Qué tecnologías utilizan?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          Trabajamos con tecnologías modernas como HTML,
-          CSS, JavaScript, React, Node.js, Laravel y MySQL.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- ITEM -->
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        ¿Pueden rediseñar una web existente?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          Sí. Podemos modernizar el diseño, optimizar el rendimiento
-          y mejorar la experiencia de usuario de tu sitio actual.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 </body>
+
 </html>
