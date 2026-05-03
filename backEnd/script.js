@@ -1,6 +1,7 @@
 lucide.createIcons();
 
 const cards = document.querySelectorAll(".tarjetas");
+const projectCards = document.querySelectorAll(".proyecto-card");
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -17,6 +18,10 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 cards.forEach((card) => {
+  observer.observe(card);
+});
+
+projectCards.forEach((card) => {
   observer.observe(card);
 });
 
