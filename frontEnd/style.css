@@ -2364,3 +2364,23 @@ span {
   }
 
 }
+
+#funciona{
+  margin-top: 45px;
+}
+
+#servicios {
+  margin-top: 45px;
+}
+
+#proyectos {
+  margin-top: 45px;
+}
+
+#proceso {
+  margin-top: 45px;
+}
+
+body {
+  background-color: white;
+}
