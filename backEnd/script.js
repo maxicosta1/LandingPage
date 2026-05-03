@@ -1,4 +1,6 @@
-lucide.createIcons();
+if (window.lucide) {
+  lucide.createIcons();
+}
 
 const cards = document.querySelectorAll(".tarjetas");
 const projectCards = document.querySelectorAll(".proyecto-card");
@@ -30,27 +32,29 @@ const nosotrosSection = document.querySelector("#nosotros");
 const nosotrosContent = document.querySelector(".nosotros-content");
 const nosotrosImage = document.querySelector(".nosotros-image");
 
-const observerNosotros = new IntersectionObserver((entries) => {
+if (nosotrosSection && nosotrosContent && nosotrosImage) {
+  const observerNosotros = new IntersectionObserver((entries) => {
 
-  entries.forEach(entry => {
+    entries.forEach(entry => {
 
-    if (entry.isIntersecting) {
+      if (entry.isIntersecting) {
 
-      nosotrosContent.classList.add("show");
+        nosotrosContent.classList.add("show");
 
-      setTimeout(() => {
-        nosotrosImage.classList.add("show");
-      }, 300);
+        setTimeout(() => {
+          nosotrosImage.classList.add("show");
+        }, 300);
 
-    }
+      }
 
+    });
+
+  }, {
+    threshold: 0.3
   });
 
-}, {
-  threshold: 0.3
-});
-
-observerNosotros.observe(nosotrosSection);
+  observerNosotros.observe(nosotrosSection);
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {

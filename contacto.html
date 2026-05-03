@@ -4,8 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sCode Digital Solutions</title>
+  <title>Contacto | sCode Digital Solutions</title>
+  <meta name="description" content="Contactá a sCode Digital Solutions para crear tu sitio web, landing page, e-commerce o sistema digital a medida.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="sCode Digital Solutions">
+  <meta name="theme-color" content="#f6f6f6">
+  <link rel="canonical" href="https://scodedigitalsolutions.com/contacto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="sCode Digital Solutions">
+  <meta property="og:title" content="Contacto | sCode Digital Solutions">
+  <meta property="og:description" content="Hablemos de tu proyecto web y de cómo hacer crecer tu negocio online.">
+  <meta property="og:url" content="https://scodedigitalsolutions.com/contacto.html">
+  <meta property="og:image" content="https://scodedigitalsolutions.com/frontEnd/images/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto | sCode Digital Solutions">
+  <meta name="twitter:description" content="Pedí una propuesta para tu sitio web, e-commerce o sistema digital.">
+  <meta name="twitter:image" content="https://scodedigitalsolutions.com/frontEnd/images/hero.png">
   <link rel="stylesheet" href="frontEnd/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacto | sCode Digital Solutions",
+    "url": "https://scodedigitalsolutions.com/contacto.html",
+    "description": "Página de contacto para solicitar desarrollo web, e-commerce, SEO y sistemas digitales.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "sCode Digital Solutions",
+      "url": "https://scodedigitalsolutions.com/",
+      "email": "scodedigitalsolutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mar del Plata",
+        "addressCountry": "AR"
+      }
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -18,20 +54,40 @@
       </div>
 
       <div class="nav-center">
-        <a href="#home"><b>Nosotros</b></a>
-        <a href="#services"><b>Servicios</b></a>
-        <a href="#clientes"><b>Clientes</b></a>
-        <a href="#soluciones"><b>Soluciones</b></a>
+        <a href="index.html#nosotros"><b>Nosotros</b></a>
+        <a href="index.html#servicios"><b>Servicios</b></a>
+        <a href="index.html#proyectos"><b>Proyectos</b></a>
+        <a href="faq.html"><b>FAQ</b></a>
       </div>
 
       <div class="nav-right">
-        <a href="#contact" class="cta-btn"><b>Contactanos</b></a>
+        <a href="contacto.html" class="cta-btn"><b>Contactanos</b></a>
       </div>
 
     </nav>
   </header>
-  <form action="" class="formulario">
-    <input type="text" placeholder="nombre">
-    <input type="number" placeholder="numero de teléfono">
+  <main id="contacto">
+    <section class="contacto-page">
+      <div class="faq-header">
+        <span>CONTACTO</span>
+        <h1>Hablemos de tu proyecto</h1>
+        <p>Contanos qué necesitás y te respondemos para avanzar con una propuesta clara.</p>
+      </div>
+    </section>
+  </main>
+
+  <form action="" class="formulario" aria-label="Formulario de contacto">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+
+    <label for="telefono">Número de teléfono</label>
+    <input id="telefono" name="telefono" type="tel" placeholder="Tu número de teléfono" autocomplete="tel" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto" rows="5"></textarea>
+
+    <button type="submit" class="cta-btn">Enviar consulta</button>
   </form>
 </body>
+
+</html>

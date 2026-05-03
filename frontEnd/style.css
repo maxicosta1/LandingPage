@@ -1753,3 +1753,614 @@ header nav {
   }
 
 }
+
+/* ===== CONTACTO ===== */
+
+.contacto-page {
+  padding: 80px 20px 10px;
+}
+
+.formulario {
+  width: min(680px, calc(100% - 40px));
+  margin: 20px auto 100px;
+  padding: 34px;
+
+  display: grid;
+  gap: 14px;
+
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+
+  box-shadow:
+    rgba(50, 50, 93, 0.08) 0px 18px 38px -18px,
+    rgba(0, 0, 0, 0.06) 0px 12px 28px -22px;
+}
+
+.formulario label {
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(0,0,0,0.14);
+  border-radius: 8px;
+  outline: none;
+
+  color: #111;
+  background: #fbfbfb;
+  font-size: 16px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #7b2cff;
+  box-shadow: 0 0 0 3px rgba(123,44,255,0.12);
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario button {
+  width: fit-content;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .formulario {
+    padding: 24px;
+    margin-bottom: 70px;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+}
+
+/* ===== RESPONSIVE GLOBAL ===== */
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+span {
+  overflow-wrap: break-word;
+}
+
+.faq-header h1 {
+  font-size: 56px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+
+  header {
+    padding: 12px 24px;
+  }
+
+  header nav {
+    gap: 20px;
+  }
+
+  .logo,
+  .nav-right {
+    flex: 0 0 auto;
+  }
+
+  .nav-center {
+    flex: 1;
+    gap: 18px;
+  }
+
+  #funciona .cont {
+    margin: 45px auto;
+    max-width: 980px;
+    gap: 48px;
+  }
+
+  .phone {
+    margin-right: 0;
+  }
+
+  .contenedor,
+  .proyectos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contenedorProceso {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .tarjetaProceso {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .process-banner {
+    border-radius: 24px;
+  }
+
+  .nosotros-container {
+    gap: 52px;
+  }
+
+  .footer-container {
+    gap: 54px;
+  }
+
+  .footer-links {
+    gap: 44px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  body {
+    padding-top: 78px;
+  }
+
+  header {
+    padding: 12px 18px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+  }
+
+  .logo {
+    flex: 1 1 auto;
+  }
+
+  .nav-right {
+    flex: 0 0 auto;
+  }
+
+  .nav-center {
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .nav-center a,
+  .cta-btn,
+  .reunion,
+  .banner-btn,
+  .nosotros-btn {
+    white-space: nowrap;
+  }
+
+  #home,
+  #servicios,
+  #proyectos,
+  #proceso,
+  #nosotros,
+  #faq,
+  #footer,
+  .contacto-page {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-img {
+    max-width: 520px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  #funciona .cont {
+    flex-direction: column;
+    text-align: center;
+    margin: 30px auto;
+    padding: 28px 22px;
+  }
+
+  #funciona h2 {
+    font-size: 48px;
+  }
+
+  #funciona .parrafo {
+    margin: 0 auto;
+  }
+
+  .phone {
+    max-width: 260px;
+    margin-top: 22px;
+  }
+
+  .textos h2,
+  .faq-header h1,
+  .faq-header h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+  .textos p,
+  .faq-header p {
+    max-width: 680px;
+  }
+
+  .nosotros-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nosotros h2,
+  #nosotros p {
+    max-width: 100%;
+  }
+
+  .nosotros-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-image img {
+    max-width: 520px;
+  }
+
+  .process-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 32px;
+  }
+
+  .banner-left {
+    flex-direction: column;
+  }
+
+  .banner-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-container,
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 34px;
+  }
+
+}
+
+@media (max-width: 680px) {
+
+  body {
+    padding-top: 70px;
+  }
+
+  header nav {
+    justify-content: space-between;
+  }
+
+  .nav-center {
+    display: none;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .cta-btn {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  #home {
+    padding-top: 16px;
+  }
+
+  .hero-img {
+    max-width: 360px;
+  }
+
+  .hero-title {
+    top: 38%;
+    width: 92%;
+    font-size: 28px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+  .content p {
+    font-size: 17px;
+    margin-bottom: 28px;
+  }
+
+  .reunion,
+  .nosotros-btn {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 22px;
+    text-align: center;
+  }
+
+  #funciona .cont {
+    margin: 18px auto;
+    padding: 26px 0;
+  }
+
+  #funciona h2 {
+    font-size: 38px;
+  }
+
+  #funciona .parrafo {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  #funciona .negrita {
+    font-size: 18px;
+  }
+
+  .phone {
+    max-width: 220px;
+    border-radius: 42px;
+  }
+
+  .textos h3,
+  .faq-header span,
+  .nosotros-subtitle {
+    font-size: 13px;
+  }
+
+  .textos h2,
+  .faq-header h1,
+  .faq-header h2 {
+    font-size: 34px;
+  }
+
+  .textos p,
+  .faq-header p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .contenedor,
+  .proyectos-grid,
+  .contenedorProceso {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjetas,
+  .proyecto-info,
+  .tarjetaProceso,
+  .nosotros-card {
+    padding: 24px;
+  }
+
+  .tarjetas {
+    border-radius: 18px;
+  }
+
+  .tarjetas h4,
+  .proyecto-info h4,
+  .tarjetaProceso h4 {
+    font-size: 21px;
+  }
+
+  .proyecto-card,
+  .faq-item {
+    border-radius: 18px;
+  }
+
+  .proyecto-preview {
+    min-height: 190px;
+    padding: 20px;
+  }
+
+  .preview-content,
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-panel,
+  .dashboard-chart {
+    min-height: 88px;
+  }
+
+  .store-layout {
+    grid-template-columns: 64px 1fr;
+    gap: 12px;
+  }
+
+  .store-products {
+    gap: 10px;
+  }
+
+  .store-products span {
+    min-height: 54px;
+  }
+
+  .process-wrapper {
+    margin-top: 36px;
+    padding: 0;
+  }
+
+  .tarjetaProceso {
+    min-width: 0;
+    min-height: auto;
+    border-radius: 18px;
+  }
+
+  .icon-circle {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 22px;
+  }
+
+  .icon-circle svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .process-banner {
+    margin-top: 38px;
+    padding: 24px;
+    border-radius: 18px;
+    gap: 26px;
+  }
+
+  .banner-icon {
+    min-width: 72px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .banner-text h3 {
+    font-size: 25px;
+  }
+
+  .banner-text p {
+    font-size: 16px;
+  }
+
+  #nosotros {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  #nosotros h2 {
+    font-size: 34px;
+  }
+
+  #nosotros p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .nosotros-image img {
+    max-width: 360px;
+  }
+
+  #faq {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .faq-header {
+    margin-bottom: 42px;
+  }
+
+  .faq-question {
+    padding: 22px;
+    gap: 18px;
+    font-size: 17px;
+  }
+
+  .faq-question span {
+    flex: 0 0 auto;
+  }
+
+  .faq-answer p {
+    padding: 0 22px 22px;
+    font-size: 16px;
+  }
+
+  #footer {
+    padding-top: 68px;
+  }
+
+  .footer-brand h2 {
+    font-size: 36px;
+  }
+
+  .footer-brand p {
+    font-size: 16px;
+  }
+
+  .footer-socials a {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 12px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 44px;
+  }
+
+  .contacto-page {
+    padding-top: 58px;
+  }
+
+  .formulario {
+    width: calc(100% - 32px);
+    padding: 22px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  header {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .cta-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .textos h2,
+  .faq-header h1,
+  .faq-header h2,
+  #nosotros h2,
+  #funciona h2 {
+    font-size: 30px;
+  }
+
+  .tarjetas,
+  .proyecto-info,
+  .tarjetaProceso,
+  .nosotros-card,
+  .process-banner,
+  .formulario {
+    padding: 20px;
+  }
+
+}
