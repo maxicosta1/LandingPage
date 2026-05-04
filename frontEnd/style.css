@@ -1769,7 +1769,11 @@ header nav {
 
     justify-content: space-between;
   }
-
+.footer-socials{
+  flex-wrap: wrap;
+   height: 22%;
+   width: 22%;
+}
 }
 
 @media (max-width: 768px) {
@@ -1792,7 +1796,9 @@ header nav {
   }
 
   .footer-socials {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+   height: 22%;
+   width: 22%;
   }
 
 }
@@ -2091,7 +2097,10 @@ span {
   .footer-links {
     gap: 34px;
   }
-
+.footer-socials{
+   height: 22%;
+   width: 22%;
+}
 }
 
 @media (max-width: 680px) {
@@ -2366,6 +2375,10 @@ span {
     width: calc(100% - 32px);
     padding: 22px;
   }
+.footer-socials{
+  width: 10%;
+  height: 10%;
+}
 
 }
 
@@ -2426,4 +2439,9 @@ span {
 
 body {
   background-color: white;
+}
+.footer-socials{
+   flex-wrap: wrap;
+   height: 22%;
+   width: 22%;
 }
