@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scodedigitalsolutions.com/sitemap.xml
+Sitemap: https://scodedigital.com/sitemap.xml
