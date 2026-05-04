@@ -1133,11 +1133,10 @@ header nav {
 }
 
 .nosotros-container {
-  max-width: 1400px;
-
+  max-width: 1900px;
   margin: 0 auto;
-
   display: flex;
+  flex: 1.3;
   align-items: center;
   justify-content: space-between;
 
@@ -1184,11 +1183,11 @@ header nav {
 
 #nosotros p {
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.5;
 
   color: rgba(255,255,255,0.72);
 
-  max-width: 650px;
+  max-width: 1000px;
 
   margin-bottom: 45px;
 }
@@ -1197,7 +1196,7 @@ header nav {
 
 .nosotros-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
 
   gap: 20px;
 
@@ -1223,9 +1222,7 @@ header nav {
 
 .nosotros-card:hover {
   transform: translateY(-8px);
-
   border: 1px solid rgba(123,44,255,0.3);
-
   box-shadow:
     0 15px 35px rgba(123,44,255,0.12);
 }
@@ -1233,16 +1230,14 @@ header nav {
 .nosotros-card h4 {
   font-size: 20px;
   color: white;
-
   margin-bottom: 12px;
 }
 
 .nosotros-card p {
   font-size: 16px;
   line-height: 1.7;
-
   color: rgba(255,255,255,0.65);
-
+  max-width: 90%;
   margin-bottom: 0;
 }
 
@@ -1252,16 +1247,11 @@ header nav {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 18px 32px;
-
   border-radius: 999px;
-
   text-decoration: none;
-
   color: white;
   font-weight: bold;
-
   background: linear-gradient(
     135deg,
     #7b2cff,
@@ -1269,14 +1259,12 @@ header nav {
   );
 
   transition: 0.4s ease;
-
   box-shadow:
     0 15px 35px rgba(123,44,255,0.25);
 }
 
 .nosotros-btn:hover {
   transform: translateY(-5px);
-
   box-shadow:
     0 20px 45px rgba(123,44,255,0.35);
 }
@@ -1285,26 +1273,20 @@ header nav {
 
 .nosotros-image {
   flex: 1;
-
   display: flex;
   justify-content: center;
-
   opacity: 0;
 }
-
 .nosotros-image.show {
   animation: nosotrosRight 1.2s ease forwards;
 }
-
 .nosotros-image img {
   width: 100%;
   max-width: 650px;
-
   object-fit: contain;
 
   filter:
     drop-shadow(0 20px 40px rgba(123,44,255,0.18));
-
   animation: floatImage 5s ease-in-out infinite;
 }
 
@@ -1624,7 +1606,7 @@ header nav {
   justify-content: space-between;
   align-items: flex-start;
 
-  gap: 80px;
+  gap: 40px;
 
   position: relative;
   z-index: 2;
