@@ -2059,12 +2059,15 @@ header nav {
 
 .footer-socials {
   display: flex;
+  align-items: center;
   gap: 18px;
-  width: 90%;
-  max-width: 90%;
+  width: auto;
+  max-width: 100%;
+  flex-wrap: nowrap;
 }
 
 .footer-socials a {
+  flex: 0 0 52px;
   width: 52px;
   height: 52px;
 
@@ -2087,6 +2090,13 @@ header nav {
   box-shadow:
     rgba(50, 50, 93, 0.08) 0px 10px 20px -10px,
     rgba(0, 0, 0, 0.04) 0px 8px 15px -12px;
+}
+
+.footer-socials img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .footer-socials a:hover {
@@ -2172,11 +2182,6 @@ header nav {
 
     justify-content: space-between;
   }
-.footer-socials{
-  flex-wrap: wrap;
-   height: 22%;
-   width: 22%;
-}
 }
 
 @media (max-width: 768px) {
@@ -2199,9 +2204,7 @@ header nav {
   }
 
   .footer-socials {
-  flex-wrap: wrap;
-   height: 22%;
-   width: 22%;
+    gap: 14px;
   }
 
 }
@@ -2965,10 +2968,6 @@ span {
   .footer-links {
     gap: 34px;
   }
-.footer-socials{
-   height: 22%;
-   width: 22%;
-}
 }
 
 @media (max-width: 680px) {
@@ -3368,12 +3367,10 @@ span {
   }
 
   .footer-socials a {
-    width: auto;
-    min-width: 0;
-    height: auto;
-    padding: 12px 14px;
-    border-radius: 999px;
-    font-size: 14px;
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
   }
 
   .footer-bottom {
@@ -3392,11 +3389,6 @@ span {
     width: calc(100% - 32px);
     padding: 22px;
   }
-.footer-socials{
-  width: 10%;
-  height: 10%;
-}
-
 }
 
 @media (max-width: 380px) {
@@ -3457,8 +3449,7 @@ span {
 body {
   background-color: white;
 }
-.footer-socials{
-   flex-wrap: wrap;
-   height: 22%;
-   width: 22%;
+.footer-socials {
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
