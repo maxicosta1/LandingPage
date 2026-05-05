@@ -1826,7 +1826,7 @@ header nav {
 
 .contacto-page {
   min-height: calc(100vh - 60px);
-  padding: 96px 25px 110px;
+  padding: 65px 30px 110px;
   background:
     radial-gradient(circle at 8% 12%, rgba(123,44,255,0.08), transparent 28%),
     linear-gradient(180deg, #f6f6f6 0%, #ffffff 100%);
