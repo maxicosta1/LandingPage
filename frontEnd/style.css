@@ -125,7 +125,7 @@ header nav {
 
 @keyframes braceOpen {
   from {
-    transform: translateX(54px);
+    transform: translateX(6px);
   }
 
   to {
@@ -135,7 +135,7 @@ header nav {
 
 @keyframes braceOpenRight {
   from {
-    transform: translateX(-54px);
+    transform: translateX(-6px);
   }
 
   to {
@@ -197,6 +197,93 @@ header nav {
 
 .nav-center a:hover::after {
   width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: white;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.active span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 16px;
+  right: 16px;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 45px rgba(25, 15, 54, 0.16);
+  backdrop-filter: blur(14px);
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  color: #21154c;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.mobile-menu a:hover {
+  background: rgba(123,44,255,0.09);
 }
 
 .cta-btn {
@@ -2751,24 +2838,27 @@ span {
   }
 
   header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    row-gap: 0;
   }
 
   .logo {
     flex: 1 1 auto;
   }
 
+  .nav-center,
   .nav-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
     flex: 0 0 auto;
   }
 
-  .nav-center {
-    order: 3;
-    flex: 1 0 100%;
-    justify-content: center;
-    gap: 18px;
+  .mobile-menu {
+    display: flex;
   }
 
   .nav-center a,
@@ -2885,14 +2975,6 @@ span {
     padding-top: 70px;
   }
 
-  header nav {
-    justify-content: space-between;
-  }
-
-  .nav-center {
-    display: none;
-  }
-
   .logo {
     min-width: auto;
   }
@@ -2975,7 +3057,139 @@ span {
 
   .phone {
     max-width: 220px;
+    padding: 10px;
     border-radius: 42px;
+  }
+
+  .phone::before {
+    inset: 4px;
+    border-radius: 38px;
+  }
+
+  .phone-speaker {
+    top: 15px;
+    width: 68px;
+    height: 19px;
+  }
+
+  .phone-screen {
+    border-radius: 30px;
+  }
+
+  .phone-status {
+    padding: 14px 14px 0;
+  }
+
+  .phone-status span {
+    height: 4px;
+  }
+
+  .phone-status span:first-child {
+    width: 24px;
+  }
+
+  .phone-status span:last-child {
+    width: 31px;
+  }
+
+  .phone-nav {
+    padding: 18px 16px 10px;
+  }
+
+  .phone-logo-mark {
+    font-size: 18px;
+  }
+
+  .phone-nav span:last-child {
+    width: 22px;
+    height: 15px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+  }
+
+  .responsive-showcase {
+    height: 150px;
+    margin: 2px 13px 0;
+  }
+
+  .mock-device {
+    border-width: 4px;
+  }
+
+  .mock-desktop {
+    left: 12px;
+    right: 12px;
+    height: 86px;
+    padding: 14px 12px;
+    border-radius: 11px;
+  }
+
+  .mock-desktop span:first-child {
+    height: 10px;
+  }
+
+  .mock-desktop span:nth-child(2) {
+    height: 6px;
+    margin-top: 11px;
+  }
+
+  .mock-desktop span:nth-child(3) {
+    height: 6px;
+    margin-top: 7px;
+  }
+
+  .mock-tablet {
+    left: 8px;
+    bottom: 8px;
+    width: 72px;
+    height: 58px;
+    padding: 11px 8px;
+    border-radius: 10px;
+  }
+
+  .mock-mobile {
+    right: 10px;
+    width: 46px;
+    height: 82px;
+    padding: 14px 6px;
+    border-radius: 14px;
+  }
+
+  .mock-tablet span:first-child,
+  .mock-mobile span:first-child {
+    height: 7px;
+  }
+
+  .mock-tablet span:last-child,
+  .mock-mobile span:nth-child(2),
+  .mock-mobile span:nth-child(3) {
+    height: 5px;
+    margin-top: 7px;
+  }
+
+  .phone-content-lines {
+    gap: 8px;
+    padding: 13px 22px 0;
+  }
+
+  .phone-content-lines span {
+    height: 6px;
+  }
+
+  .phone-button {
+    width: 104px;
+    height: 31px;
+    margin-top: 19px;
+  }
+
+  .phone-grid {
+    gap: 7px;
+    padding: 26px 17px 0;
+  }
+
+  .phone-grid span {
+    height: 50px;
+    border-radius: 11px;
   }
 
   .textos h3,

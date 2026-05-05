@@ -59,6 +59,33 @@ if (nosotrosSection && nosotrosContent && nosotrosImage) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const navOverlay = document.querySelector(".nav-overlay");
+
+  if (menuToggle && mobileMenu && navOverlay) {
+    const closeMenu = () => {
+      menuToggle.classList.remove("active");
+      mobileMenu.classList.remove("active");
+      navOverlay.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.classList.toggle("active");
+
+      mobileMenu.classList.toggle("active", isOpen);
+      navOverlay.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navOverlay.addEventListener("click", closeMenu);
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+
   const faqQuestions = document.querySelectorAll(".faq-question");
 
   faqQuestions.forEach(question => {
