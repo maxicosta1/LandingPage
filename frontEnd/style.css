@@ -301,7 +301,7 @@ header nav {
 }
 
 .cta-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-1.5px);
 
   box-shadow: 0 10px 20px rgba(123,44,255,0.17);
 }
