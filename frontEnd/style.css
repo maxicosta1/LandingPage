@@ -3057,14 +3057,14 @@ span {
   }
 
   .phone {
-    max-width: 220px;
+    max-width: 260px;
     padding: 8px;
-    border-radius: 34px;
+    border-radius: 30px;
   }
 
   .phone::before {
     inset: 3px;
-    border-radius: 31px;
+    border-radius: 27px;
   }
 
   .phone-speaker {
@@ -3074,7 +3074,7 @@ span {
   }
 
   .phone-screen {
-    border-radius: 26px;
+    border-radius: 22px;
   }
 
   .phone-status {
@@ -3109,8 +3109,8 @@ span {
   }
 
   .responsive-showcase {
-    height: 40%;
-    margin: 2% 8% 0;
+    height: 43%;
+    margin: 3% 7% 0;
   }
 
   .mock-device {
@@ -3121,9 +3121,9 @@ span {
     left: 10%;
     right: auto;
     width: 80%;
-    height: 38%;
+    height: 34%;
     padding: 7% 7%;
-    border-radius: 11px;
+    border-radius: 9px;
   }
 
   .mock-desktop span:first-child {
@@ -3142,20 +3142,20 @@ span {
 
   .mock-tablet {
     left: 8%;
-    bottom: 5%;
-    width: 37%;
-    height: 33%;
+    bottom: 12%;
+    width: 34%;
+    height: 28%;
     padding: 6% 5%;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   .mock-mobile {
     right: 9%;
-    bottom: 5%;
-    width: 28%;
-    height: 43%;
+    bottom: 7%;
+    width: 26%;
+    height: 37%;
     padding: 7% 4%;
-    border-radius: 14px;
+    border-radius: 11px;
   }
 
   .mock-tablet span:first-child,
@@ -3171,8 +3171,8 @@ span {
   }
 
   .phone-content-lines {
-    gap: 8px;
-    padding: 5% 12% 0;
+    gap: 6px;
+    padding: 3% 12% 0;
   }
 
   .phone-content-lines span {
@@ -3181,13 +3181,13 @@ span {
 
   .phone-button {
     width: 52%;
-    height: 6.5%;
-    margin-top: 7%;
+    height: 5.8%;
+    margin-top: 5%;
   }
 
   .phone-grid {
     gap: 7px;
-    padding: 9% 10% 0;
+    padding: 6% 10% 0;
   }
 
   .phone-grid span {
