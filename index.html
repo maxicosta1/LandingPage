@@ -12,6 +12,8 @@
   <meta name="theme-color" content="#f6f6f6">
   <link rel="canonical" href="https://scodedigital.com/">
   <link rel="alternate" href="https://scodedigital.com/" hreflang="es">
+  <link rel="icon" type="image/png" href="frontEnd/images/sCode.png">
+  <link rel="apple-touch-icon" href="frontEnd/images/sCode.png">
   <link rel="preload" href="frontEnd/Fonto/Garet-Book.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="frontEnd/Fonto/Garet-Heavy.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
@@ -36,7 +38,7 @@
         "@id": "https://scodedigital.com/#organization",
         "name": "sCode Digital Solutions",
         "url": "https://scodedigital.com/",
-        "logo": "https://scodedigital.com/frontEnd/images/hero.png",
+        "logo": "https://scodedigital.com/frontEnd/images/sCode.png",
         "email": "scodedigitalsolutions@gmail.com",
         "address": {
           "@type": "PostalAddress",
@@ -91,7 +93,14 @@
     <nav>
 
       <div class="logo">
-        <a href="index.html">sCode</a>
+        <a href="index.html" class="brand-logo" aria-label="sCode Digital Solutions - Inicio">
+          <span class="brand-brace brand-brace-left">{</span>
+          <span class="brand-wordmark">
+            <span class="brand-main">sCode</span>
+            <span class="brand-sub">digital solutions</span>
+          </span>
+          <span class="brand-brace brand-brace-right">}</span>
+        </a>
       </div>
 
       <div class="nav-center">
@@ -170,7 +179,46 @@
       </div>
 
       <div class="img-container">
-        <img src="frontEnd/images/phone.png" alt="Sitio web responsive visto en teléfono móvil" class="phone" loading="lazy">
+        <div class="phone" role="img" aria-label="Sitio web responsive visto en teléfono móvil">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen">
+            <div class="phone-status">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="phone-nav">
+              <span class="phone-logo-mark">{}</span>
+              <span></span>
+            </div>
+            <div class="responsive-showcase">
+              <div class="mock-device mock-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="mock-device mock-tablet">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="mock-device mock-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="phone-content-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="phone-button"></div>
+            <div class="phone-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

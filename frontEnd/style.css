@@ -71,13 +71,90 @@ header nav {
 
 .logo {
   flex: 1;
-  font-size: 22px;
-  font-weight: bold;
+  min-width: 182px;
 }
 
 .logo a {
   text-decoration: none;
-  color: black;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  color: #251553;
+}
+
+.brand-brace {
+  color: #7b2cff;
+  font-size: 39px;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateX(0);
+  animation: braceOpen 1s cubic-bezier(.2,.8,.2,1) 0.2s both;
+}
+
+.brand-brace-right {
+  animation-name: braceOpenRight;
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  animation: wordmarkReveal 0.85s cubic-bezier(.2,.8,.2,1) 0.55s forwards;
+}
+
+.brand-main {
+  color: #21154c;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.brand-sub {
+  color: #21154c;
+  font-size: 8px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+@keyframes braceOpen {
+  from {
+    transform: translateX(54px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes braceOpenRight {
+  from {
+    transform: translateX(-54px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wordmarkReveal {
+  to {
+    max-width: 150px;
+    opacity: 1;
+  }
+}
+
+@keyframes wordmarkRevealSmall {
+  to {
+    max-width: 72px;
+    opacity: 1;
+  }
 }
 
 .nav-center {
@@ -293,16 +370,234 @@ header nav {
 .phone {
   opacity: 0;
 
+  position: relative;
+
   max-width: 300px;
-  width: 100%;
+  width: min(100%, 300px);
+  aspect-ratio: 9 / 18.6;
 
   margin-right: 160px;
 
-  border-radius: 56px;
+  padding: 14px;
+
+  border-radius: 46px;
+
+  background:
+    linear-gradient(145deg, #2b2b33, #050505 48%, #2f2f38);
 
   box-shadow:
     rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 42px;
+  pointer-events: none;
+}
+
+.phone-speaker {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+  width: 88px;
+  height: 24px;
+  border-radius: 999px;
+  background: #050505;
+  transform: translateX(-50%);
+}
+
+.phone-screen {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 72% 17%, rgba(123,44,255,0.22), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f7f5ff 48%, #ece7ff 100%);
+}
+
+.phone-status,
+.phone-nav,
+.responsive-showcase,
+.phone-content-lines,
+.phone-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.phone-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 18px 0;
+}
+
+.phone-status span {
+  display: block;
+  height: 5px;
+  border-radius: 999px;
+  background: #111;
+}
+
+.phone-status span:first-child {
+  width: 32px;
+}
+
+.phone-status span:last-child {
+  width: 40px;
+}
+
+.phone-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px 16px;
+}
+
+.phone-logo-mark {
+  color: #7b2cff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.phone-nav span:last-child {
+  width: 28px;
+  height: 18px;
+  border-top: 3px solid #171717;
+  border-bottom: 3px solid #171717;
+}
+
+.responsive-showcase {
+  height: 205px;
+  margin: 4px 18px 0;
+}
+
+.mock-device {
+  position: absolute;
+  border: 5px solid #171717;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(28,14,62,0.14);
+}
+
+.mock-device span {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7b2cff, #d76cff);
+}
+
+.mock-desktop {
+  left: 20px;
+  right: 20px;
+  top: 8px;
+  height: 116px;
+  padding: 20px 18px;
+  border-radius: 13px;
+}
+
+.mock-desktop span:first-child {
+  width: 60%;
+  height: 14px;
+}
+
+.mock-desktop span:nth-child(2) {
+  width: 78%;
+  height: 8px;
+  margin-top: 16px;
+  background: #d9d4e8;
+}
+
+.mock-desktop span:nth-child(3) {
+  width: 46%;
+  height: 8px;
+  margin-top: 10px;
+  background: #d9d4e8;
+}
+
+.mock-tablet {
+  left: 14px;
+  bottom: 13px;
+  width: 96px;
+  height: 78px;
+  padding: 16px 12px;
+  border-radius: 12px;
+}
+
+.mock-tablet span:first-child,
+.mock-mobile span:first-child {
+  width: 72%;
+  height: 10px;
+}
+
+.mock-tablet span:last-child,
+.mock-mobile span:nth-child(2),
+.mock-mobile span:nth-child(3) {
+  width: 90%;
+  height: 7px;
+  margin-top: 10px;
+  background: #d9d4e8;
+}
+
+.mock-mobile {
+  right: 18px;
+  bottom: 0;
+  width: 62px;
+  height: 112px;
+  padding: 19px 8px;
+  border-radius: 18px;
+}
+
+.phone-content-lines {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px 28px 0;
+}
+
+.phone-content-lines span {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: #c9c2df;
+}
+
+.phone-content-lines span:first-child {
+  width: 82%;
+}
+
+.phone-content-lines span:nth-child(2) {
+  width: 68%;
+}
+
+.phone-content-lines span:last-child {
+  width: 56%;
+}
+
+.phone-button {
+  width: 132px;
+  height: 38px;
+  margin: 26px auto 0;
+  border-radius: 999px;
+  background: #050505;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 38px 22px 0;
+}
+
+.phone-grid span {
+  height: 72px;
+  border: 1px solid rgba(123,44,255,0.13);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(123,44,255,0.18), rgba(123,44,255,0.04));
 }
 
 /* ===== ANIMACIONES ===== */
@@ -2599,7 +2894,27 @@ span {
   }
 
   .logo {
-    font-size: 21px;
+    min-width: auto;
+  }
+
+  .brand-logo {
+    gap: 5px;
+  }
+
+  .brand-brace {
+    font-size: 32px;
+  }
+
+  .brand-wordmark {
+    animation-name: wordmarkRevealSmall;
+  }
+
+  .brand-main {
+    font-size: 20px;
+  }
+
+  .brand-sub {
+    display: none;
   }
 
   .cta-btn {
