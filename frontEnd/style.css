@@ -488,11 +488,11 @@ header nav {
 
 .phone-speaker {
   position: absolute;
-  top: 20px;
+  top: 3.8%;
   left: 50%;
   z-index: 3;
-  width: 88px;
-  height: 24px;
+  width: 36%;
+  height: 4.5%;
   border-radius: 999px;
   background: #050505;
   transform: translateX(-50%);
@@ -559,13 +559,14 @@ header nav {
 }
 
 .responsive-showcase {
-  height: 205px;
-  margin: 4px 18px 0;
+  position: relative;
+  height: 42%;
+  margin: 2% 7% 0;
 }
 
 .mock-device {
   position: absolute;
-  border: 5px solid #171717;
+  border: clamp(3px, 1.6vw, 5px) solid #171717;
   background: #fff;
   box-shadow: 0 12px 30px rgba(28,14,62,0.14);
 }
@@ -577,11 +578,11 @@ header nav {
 }
 
 .mock-desktop {
-  left: 20px;
-  right: 20px;
-  top: 8px;
-  height: 116px;
-  padding: 20px 18px;
+  left: 10%;
+  top: 3%;
+  width: 80%;
+  height: 39%;
+  padding: 8% 8%;
   border-radius: 13px;
 }
 
@@ -605,11 +606,11 @@ header nav {
 }
 
 .mock-tablet {
-  left: 14px;
-  bottom: 13px;
-  width: 96px;
-  height: 78px;
-  padding: 16px 12px;
+  left: 10%;
+  bottom: 4%;
+  width: 36%;
+  height: 34%;
+  padding: 7% 6%;
   border-radius: 12px;
 }
 
@@ -629,11 +630,11 @@ header nav {
 }
 
 .mock-mobile {
-  right: 18px;
-  bottom: 0;
-  width: 62px;
-  height: 112px;
-  padding: 19px 8px;
+  right: 11%;
+  bottom: 4%;
+  width: 27%;
+  height: 45%;
+  padding: 8% 4%;
   border-radius: 18px;
 }
 
@@ -641,7 +642,7 @@ header nav {
   display: grid;
   justify-items: center;
   gap: 10px;
-  padding: 18px 28px 0;
+  padding: 6% 12% 0;
 }
 
 .phone-content-lines span {
@@ -664,9 +665,9 @@ header nav {
 }
 
 .phone-button {
-  width: 132px;
-  height: 38px;
-  margin: 26px auto 0;
+  width: 54%;
+  height: 7%;
+  margin: 8% auto 0;
   border-radius: 999px;
   background: #050505;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
@@ -676,11 +677,12 @@ header nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 38px 22px 0;
+  padding: 10% 10% 0;
 }
 
 .phone-grid span {
-  height: 72px;
+  aspect-ratio: 1 / 1.25;
+  height: auto;
   border: 1px solid rgba(123,44,255,0.13);
   border-radius: 14px;
   background:
@@ -3057,23 +3059,23 @@ span {
 
   .phone {
     max-width: 220px;
-    padding: 10px;
-    border-radius: 42px;
+    padding: 8px;
+    border-radius: 34px;
   }
 
   .phone::before {
-    inset: 4px;
-    border-radius: 38px;
+    inset: 3px;
+    border-radius: 31px;
   }
 
   .phone-speaker {
-    top: 15px;
-    width: 68px;
-    height: 19px;
+    top: 3.9%;
+    width: 35%;
+    height: 4.2%;
   }
 
   .phone-screen {
-    border-radius: 30px;
+    border-radius: 26px;
   }
 
   .phone-status {
@@ -3108,19 +3110,20 @@ span {
   }
 
   .responsive-showcase {
-    height: 150px;
-    margin: 2px 13px 0;
+    height: 40%;
+    margin: 2% 8% 0;
   }
 
   .mock-device {
-    border-width: 4px;
+    border-width: 3px;
   }
 
   .mock-desktop {
-    left: 12px;
-    right: 12px;
-    height: 86px;
-    padding: 14px 12px;
+    left: 10%;
+    right: auto;
+    width: 80%;
+    height: 38%;
+    padding: 7% 7%;
     border-radius: 11px;
   }
 
@@ -3139,19 +3142,20 @@ span {
   }
 
   .mock-tablet {
-    left: 8px;
-    bottom: 8px;
-    width: 72px;
-    height: 58px;
-    padding: 11px 8px;
+    left: 8%;
+    bottom: 5%;
+    width: 37%;
+    height: 33%;
+    padding: 6% 5%;
     border-radius: 10px;
   }
 
   .mock-mobile {
-    right: 10px;
-    width: 46px;
-    height: 82px;
-    padding: 14px 6px;
+    right: 9%;
+    bottom: 5%;
+    width: 28%;
+    height: 43%;
+    padding: 7% 4%;
     border-radius: 14px;
   }
 
@@ -3169,7 +3173,7 @@ span {
 
   .phone-content-lines {
     gap: 8px;
-    padding: 13px 22px 0;
+    padding: 5% 12% 0;
   }
 
   .phone-content-lines span {
@@ -3177,18 +3181,17 @@ span {
   }
 
   .phone-button {
-    width: 104px;
-    height: 31px;
-    margin-top: 19px;
+    width: 52%;
+    height: 6.5%;
+    margin-top: 7%;
   }
 
   .phone-grid {
     gap: 7px;
-    padding: 26px 17px 0;
+    padding: 9% 10% 0;
   }
 
   .phone-grid span {
-    height: 50px;
     border-radius: 11px;
   }
 
