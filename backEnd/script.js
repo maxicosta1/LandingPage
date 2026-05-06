@@ -59,6 +59,38 @@ if (nosotrosSection && nosotrosContent && nosotrosImage) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const modalBienvenida = document.querySelector("#modal-bienvenida");
+  const botonCerrarModal = document.querySelector(".boton-cerrar-modal");
+  const botonAccionModal = document.querySelector(".boton-modal-bienvenida");
+
+  if (modalBienvenida && botonCerrarModal) {
+    document.body.classList.add("modal-bienvenida-abierto");
+
+    // Cierra el modal y devuelve el scroll normal de la pagina.
+    const cerrarModalBienvenida = () => {
+      modalBienvenida.classList.add("oculto");
+      document.body.classList.remove("modal-bienvenida-abierto");
+    };
+
+    botonCerrarModal.addEventListener("click", cerrarModalBienvenida);
+
+    modalBienvenida.addEventListener("click", (evento) => {
+      if (evento.target === modalBienvenida) {
+        cerrarModalBienvenida();
+      }
+    });
+
+    if (botonAccionModal) {
+      botonAccionModal.addEventListener("click", cerrarModalBienvenida);
+    }
+
+    document.addEventListener("keydown", (evento) => {
+      if (evento.key === "Escape") {
+        cerrarModalBienvenida();
+      }
+    });
+  }
+
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
   const navOverlay = document.querySelector(".nav-overlay");
