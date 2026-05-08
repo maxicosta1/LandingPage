@@ -1,0 +1,3 @@
+<FilesMatch "^(config\.php|crear_tabla_contactos\.sql|README\.md)$">
+  Require all denied
+</FilesMatch>

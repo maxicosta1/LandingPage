@@ -24,6 +24,7 @@
   <meta name="twitter:description" content="Pedi una propuesta para tu sitio web, base de datos o sistema digital.">
   <meta name="twitter:image" content="https://scodedigital.com/frontEnd/images/hero.png">
   <link rel="stylesheet" href="/frontEnd/style.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -119,7 +120,9 @@
             </div>
           </div>
 
-          <form action="https://formsubmit.co/contact@scodedigital.com" method="POST" class="formulario">
+          <form action="/backEnd/procesar_formulario.php" method="POST" class="formulario">
+            <input type="text" name="website" autocomplete="off" tabindex="-1" hidden>
+
             <div class="formulario-header">
               <span>Presupuesto</span>
               <h2>Contanos sobre tu idea</h2>
@@ -140,6 +143,8 @@
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto" rows="5" minlength="10" required></textarea>
+
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADLmXc6hyVDEHVKl"></div>
 
             <button type="submit" class="cta-btn">Enviar consulta</button>
           </form>
