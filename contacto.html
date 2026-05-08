@@ -119,7 +119,7 @@
             </div>
           </div>
 
-          <form action="https://formsubmit.co/maximonewps@gmail.com" method="POST" class="formulario">
+          <form action="https://formsubmit.co/contact@scodedigital.com" method="POST" class="formulario">
             <div class="formulario-header">
               <span>Presupuesto</span>
               <h2>Contanos sobre tu idea</h2>
@@ -127,19 +127,19 @@
             </div>
 
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" minlength="2" required>
 
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required>
 
             <label for="telefono">N&uacute;mero de tel&eacute;fono</label>
-            <input id="telefono" name="telefono" type="number" placeholder="Tu n&uacute;mero de tel&eacute;fono" autocomplete="tel" required>
+            <input id="telefono" name="telefono" type="tel" placeholder="Tu n&uacute;mero de tel&eacute;fono" autocomplete="tel" required>
 
             <label for="horario">Disponibilidad para reunirnos</label>
             <input id="horario" name="horario" type="text" placeholder="Ej: esta semana por la tarde" autocomplete="off">
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto" rows="5"></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto" rows="5" minlength="10" required></textarea>
 
             <button type="submit" class="cta-btn">Enviar consulta</button>
           </form>
