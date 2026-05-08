@@ -22,6 +22,8 @@ Editar `backEnd/config.php` con los datos reales de DonWeb:
 'db_user' => 'usuario_de_tu_base',
 'db_pass' => 'password_de_tu_base',
 'turnstile_secret_key' => 'clave_secreta_de_cloudflare_turnstile',
+'notification_email' => 'email_que_recibe_las_consultas',
+'from_email' => 'email_del_mismo_dominio',
 ```
 
 En hosting compartido normalmente `db_host` es `localhost`, salvo que DonWeb indique otro host.
@@ -65,6 +67,17 @@ El formulario debe enviar por `POST` al archivo PHP:
 - Salida HTML: se imprime con `htmlspecialchars`.
 - Spam basico: campo honeypot `website`; si llega completo, se rechaza.
 - Verificacion humana: Cloudflare Turnstile se valida en el servidor antes de insertar en MySQL.
+- Email de aviso: despues de guardar el contacto, PHP envia una notificacion con `mail()`.
+
+## Flujo final
+
+El formulario ya no necesita FormSubmit como `action`.
+
+```text
+Formulario -> procesar_formulario.php -> MySQL -> email de aviso
+```
+
+Esto reemplaza la funcion principal de FormSubmit, pero mantiene el mismo beneficio: recibir la consulta por email. La ventaja es que tambien queda guardada en la base de datos.
 
 ## Archivos a subir
 
@@ -72,3 +85,5 @@ El formulario debe enviar por `POST` al archivo PHP:
 - `backEnd/procesar_formulario.php`
 - `backEnd/.htaccess`
 - `backEnd/crear_tabla_contactos.sql` solo hace falta para crear la tabla, no es necesario dejarlo publicado.
+
+No subas `backEnd/config.php` a un repositorio publico porque contiene contrasenas y claves privadas. Para GitHub usa `backEnd/config.example.php` como plantilla.

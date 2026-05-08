@@ -16,6 +16,8 @@ if (!empty($_POST['website'] ?? '')) {
 $nombre = limpiarTexto($_POST['nombre'] ?? '', 100);
 $email = trim((string)($_POST['email'] ?? ''));
 $mensaje = limpiarTexto($_POST['mensaje'] ?? '', 2000);
+$telefono = limpiarTexto($_POST['telefono'] ?? '', 40);
+$horario = limpiarTexto($_POST['horario'] ?? '', 120);
 $turnstileToken = trim((string)($_POST['cf-turnstile-response'] ?? ''));
 $config = require __DIR__ . '/config.php';
 
@@ -68,6 +70,14 @@ try {
         ':mensaje' => $mensaje,
         ':ip' => substr($_SERVER['REMOTE_ADDR'] ?? '', 0, 45),
         ':user_agent' => substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 255),
+    ]);
+
+    enviarEmailNotificacion($config, [
+        'nombre' => $nombre,
+        'email' => $email,
+        'telefono' => $telefono,
+        'horario' => $horario,
+        'mensaje' => $mensaje,
     ]);
 
     mostrarRespuesta('Gracias. Recibimos tu mensaje correctamente.', true);
@@ -146,6 +156,45 @@ function validarTurnstile(string $token, string $secretKey): bool
     $json = json_decode($respuesta, true);
 
     return is_array($json) && ($json['success'] ?? false) === true;
+}
+
+function enviarEmailNotificacion(array $config, array $datos): void
+{
+    $destino = filter_var($config['notification_email'] ?? '', FILTER_VALIDATE_EMAIL);
+    $remitente = filter_var($config['from_email'] ?? '', FILTER_VALIDATE_EMAIL);
+
+    if (!$destino || !$remitente) {
+        error_log('Email de notificacion no configurado correctamente.');
+        return;
+    }
+
+    $asunto = 'Nueva consulta desde la landing';
+    $lineas = [
+        'Recibiste una nueva consulta desde la landing.',
+        '',
+        'Nombre: ' . $datos['nombre'],
+        'Email: ' . $datos['email'],
+        'Telefono: ' . ($datos['telefono'] !== '' ? $datos['telefono'] : 'No informado'),
+        'Disponibilidad: ' . ($datos['horario'] !== '' ? $datos['horario'] : 'No informada'),
+        '',
+        'Mensaje:',
+        $datos['mensaje'],
+        '',
+        'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'No disponible'),
+    ];
+
+    $headers = [
+        'From: sCode Digital Solutions <' . $remitente . '>',
+        'Reply-To: ' . $datos['email'],
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+    ];
+
+    $enviado = mail($destino, $asunto, implode("\n", $lineas), implode("\r\n", $headers));
+
+    if (!$enviado) {
+        error_log('El contacto se guardo en MySQL, pero no se pudo enviar el email de notificacion.');
+    }
 }
 
 function mostrarRespuesta(string $mensaje, bool $ok): void
