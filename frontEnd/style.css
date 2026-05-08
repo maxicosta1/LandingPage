@@ -3751,10 +3751,14 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 56px;
-  padding: 14px 26px;
-  border-radius: 999px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2100;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border-radius: 50%;
   background: #25d366;
   color: white;
   font-size: 16px;
@@ -3766,10 +3770,19 @@ body {
 }
 
 .whatsapp-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   fill: currentColor;
   flex: 0 0 auto;
+}
+
+.whatsapp-btn span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 .whatsapp-btn:hover {
@@ -3785,7 +3798,10 @@ body {
   }
 
   .whatsapp-btn {
-    width: 100%;
-    max-width: 320px;
+    right: 18px;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+    max-width: none;
   }
 }
