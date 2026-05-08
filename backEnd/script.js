@@ -2,6 +2,20 @@ if (window.lucide) {
   lucide.createIcons();
 }
 
+const cleanUrlMap = {
+  "/index.html": "/",
+  "/contacto.html": "/contacto/",
+  "/faq.html": "/faq/"
+};
+
+const currentPath = window.location.pathname;
+const cleanPath = Object.keys(cleanUrlMap).find(path => currentPath.endsWith(path));
+
+if (cleanPath) {
+  const basePath = currentPath.slice(0, -cleanPath.length);
+  window.history.replaceState(null, "", `${basePath}${cleanUrlMap[cleanPath]}${window.location.search}${window.location.hash}`);
+}
+
 const cards = document.querySelectorAll(".tarjetas");
 const projectCards = document.querySelectorAll(".proyecto-card");
 

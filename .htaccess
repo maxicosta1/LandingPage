@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+contacto\.html[\s?] [NC]
+RewriteRule ^contacto\.html$ /contacto/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+faq\.html[\s?] [NC]
+RewriteRule ^faq\.html$ /faq/ [R=301,L]
+
+RewriteRule ^contacto/?$ contacto.html [L]
+RewriteRule ^faq/?$ faq.html [L]

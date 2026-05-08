@@ -642,6 +642,14 @@ header nav {
   margin: 0 auto 35px;
 }
 
+.content-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 .reunion {
   background: linear-gradient(135deg, #7c3aed, #9333ea);
 
@@ -658,10 +666,41 @@ header nav {
   box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
 }
 
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.24);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
 .reunion:hover {
   transform: translateY(-5px);
 
   box-shadow: 0 15px 35px rgba(124, 58, 237, 0.35);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-5px);
+  background: #1ebe5d;
+  color: white;
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.34);
 }
 
 /* ===== FUNCIONA ===== */
@@ -3111,6 +3150,7 @@ span {
   .nav-center a,
   .cta-btn,
   .reunion,
+  .whatsapp-btn,
   .banner-btn,
   .nosotros-btn {
     white-space: nowrap;
@@ -3271,6 +3311,7 @@ span {
   }
 
   .reunion,
+  .whatsapp-btn,
   .nosotros-btn {
     display: inline-flex;
     justify-content: center;
