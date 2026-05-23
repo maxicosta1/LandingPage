@@ -1132,6 +1132,7 @@ header nav {
 .tarjetas.show {
   opacity: 1;
   transform: translateY(0);
+  text-align: center;
 }
 
 .tarjetas:nth-child(1) { transition-delay: 0.32s; }
