@@ -254,6 +254,9 @@
 
       <div class="img-container">
         <div class="phone" role="img" aria-label="Sitio web responsive visto en teléfono móvil">
+          <span class="phone-side-btn phone-power"></span>
+          <span class="phone-side-btn phone-volume-up"></span>
+          <span class="phone-side-btn phone-volume-down"></span>
           <div class="phone-speaker"></div>
           <div class="phone-screen">
             <div class="phone-status">
@@ -264,21 +267,10 @@
               <span class="phone-logo-mark">{}</span>
               <span></span>
             </div>
-            <div class="responsive-showcase">
-              <div class="mock-device mock-desktop">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="mock-device mock-tablet">
-                <span></span>
-                <span></span>
-              </div>
-              <div class="mock-device mock-mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+            <div class="phone-hero">
+              <span class="phone-hero-blob"></span>
+              <strong>Modernizamos</strong>
+              <strong>tu negocio.</strong>
             </div>
             <div class="phone-content-lines">
               <span></span>
@@ -286,7 +278,7 @@
               <span></span>
             </div>
             <div class="phone-button"></div>
-            <div class="phone-grid">
+            <div class="phone-cards">
               <span></span>
               <span></span>
               <span></span>
@@ -371,29 +363,6 @@
       }
 
     }, 2000);
-
-  </script>
-
-  <!-- SCRIPT SCROLL ANIMATION -->
-  <script>
-
-    const texto = document.querySelector(".texto");
-
-    function mostrarAnimacion() {
-
-      const triggerBottom = window.innerHeight * 0.8;
-
-      const boxTop = texto.getBoundingClientRect().top;
-
-      if (boxTop < triggerBottom) {
-        texto.classList.add("show");
-      }
-
-    }
-
-    window.addEventListener("scroll", mostrarAnimacion);
-
-    mostrarAnimacion();
 
   </script>
 
@@ -800,7 +769,7 @@
 
         <h3>Contacto</h3>
 
-        <a href="#">contact@scodedigital.com</a>
+        <a href="mailto:contact@scodedigital.com">contact@scodedigital.com</a>
         <a href="https://wa.me/5492236908197" target="_blank" rel="noopener noreferrer">+54 9 223 690 8197</a>
         <a href="#">Mar del Plata, Argentina</a>
 

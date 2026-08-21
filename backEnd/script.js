@@ -34,6 +34,9 @@ if (!document.querySelector(".whatsapp-btn")) {
 
 const cards = document.querySelectorAll(".tarjetas");
 const projectCards = document.querySelectorAll(".proyecto-card");
+const processCards = document.querySelectorAll(".tarjetaProceso");
+const processBanner = document.querySelector(".process-banner");
+const funcionaTexto = document.querySelector(".texto");
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -56,6 +59,18 @@ cards.forEach((card) => {
 projectCards.forEach((card) => {
   observer.observe(card);
 });
+
+processCards.forEach((card) => {
+  observer.observe(card);
+});
+
+if (processBanner) {
+  observer.observe(processBanner);
+}
+
+if (funcionaTexto) {
+  observer.observe(funcionaTexto);
+}
 
 
 const nosotrosSection = document.querySelector("#nosotros");
